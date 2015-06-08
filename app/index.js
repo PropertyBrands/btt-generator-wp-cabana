@@ -45,12 +45,12 @@ wpCabanaTheme.prototype.askFor = function askFor() {
     {
       name: 'themeAuthor',
       message: 'Name of the theme author?',
-      default: 'Colin OBrien'
+      default: 'Bluetent'
     },
     {
       name: 'themeAuthorURI',
       message: 'Website of the themes authors?',
-      default: 'http://ecstatic.media'
+      default: 'http://bluetent.com'
     },
     {
       name: 'themeURI',

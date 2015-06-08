@@ -1,4 +1,4 @@
-# Yeoman Generator to generate WordPress Cabana Theme
+# Yeoman Generator to generate WordPress Cabana theme
 
 Cabana is loosely based on underscores. This Yeoman generator will download Cabana, change all references to your theme name and run `npm install` for you.
 
