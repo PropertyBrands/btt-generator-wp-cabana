@@ -6,6 +6,14 @@ var chalk = require('chalk');
 var yosay = require('yosay');
 var fs = require('fs');
 var slug = require('slug');
+var ncp = require('ncp').ncp;
+
+ncp('../node_modules/wp-theme-cabana/', '.', function (err) {
+  if (err) {
+    return console.error(err);
+  }
+  console.log('Theme copied successfully');
+});
 
 
 var wpCabanaTheme = module.exports = function wpCabanaTheme(args, options, config) {

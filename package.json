@@ -20,17 +20,18 @@
     "yeoman-generator"
   ],
   "dependencies": {
-    "yeoman-generator": "~0.13.0",
-    "chalk": "^1.0.0",
-    "yosay": "^1.0.2",
-    "simple-git": "~0.7.0",
-    "rsvp": "~3.0.6",
-    "temporary": "0.0.8",
     "async": "~0.7.0",
+    "cabana": "bluetent/wp-theme-cabana",
+    "chalk": "^1.0.0",
     "lodash": "^3.6.0",
-    "underscore.string": "^3.0.3",
+    "ncp": "^2.0.0",
+    "rsvp": "~3.0.6",
+    "simple-git": "~0.7.0",
     "slug": "^0.9.1",
-    "cabana": "bluetent/wp-theme-cabana"
+    "temporary": "0.0.8",
+    "underscore.string": "^3.0.3",
+    "yeoman-generator": "~0.13.0",
+    "yosay": "^1.0.2"
   },
   "devDependencies": {
     "mocha": "*"
