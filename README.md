@@ -1,20 +1,18 @@
-# Wordpress Theme Generator to generate Cabana Theme
-
-#### a work in progress. not available on npm yet 
+# Yeoman Generator to generate WordPress Cabana Theme
 
 Cabana is loosely based on underscores. This Yeoman generator will download Cabana, change all references to your theme name and run `npm install` for you.
 
 ## Installation
 
-```npm install -g generator-wp-cabana```
+This generator is not published on NPM so use this method to download and install
+
+```npm install -g https://github.com/bluetent/generator-wp-cabana/tarball/master```
 
 ``` mkdir themename && cd themename ```
 
 ``` yo wp-cabana ```
 
 And then follow the propmts.
-
-
 
 ## License
 
