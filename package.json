@@ -4,11 +4,11 @@
   "description": "Yeoman generator",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "seafarer/generator-wp-cabana",
+  "repository": "bluetent/generator-wp-cabana",
   "author": {
     "name": "Colin OBrien",
     "email": "",
-    "url": "https://github.com/seafarer"
+    "url": "https://github.com/bluetent"
   },
   "scripts": {
     "test": "mocha"
