@@ -6,15 +6,6 @@ var chalk = require('chalk');
 var yosay = require('yosay');
 var fs = require('fs');
 var slug = require('slug');
-var ncp = require('ncp').ncp;
-
-ncp('../node_modules/wp-theme-cabana/', '.', function (err) {
-  if (err) {
-    return console.error(err);
-  }
-  console.log('Theme copied successfully');
-});
-
 
 var wpCabanaTheme = module.exports = function wpCabanaTheme(args, options, config) {
   yeoman.generators.Base.apply(this, arguments);
@@ -153,11 +144,11 @@ wpCabanaTheme.prototype.app = function () {
   this.mkdir('icons');
   this.mkdir('fonts');
 
-  this.copy('_gulpfile.js', 'Gulpfile.js');
-  this.copy('_package.json', 'package.json');
-  this.copy('_bower.json', 'bower.json');
-  this.copy('scss-lint.yml', '.scss-lint.yml');
-  this.copy('editorconfig', '.editorconfig');
-  this.copy('jshintrc', '.jshintrc');
-  this.copy('bowerrc', '.bowerrc');
+  this.copy('./templates/_gulpfile.js', 'Gulpfile.js');
+  this.copy('./templates/_package.json', 'package.json');
+  this.copy('./templates/_bower.json', 'bower.json');
+  this.copy('./templates/scss-lint.yml', '.scss-lint.yml');
+  this.copy('./templates/editorconfig', '.editorconfig');
+  this.copy('./templates/jshintrc', '.jshintrc');
+  this.copy('./templates/bowerrc', '.bowerrc');
 };
