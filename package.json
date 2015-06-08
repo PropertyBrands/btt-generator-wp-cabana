@@ -1,0 +1,37 @@
+{
+  "name": "generator-wp-cabana",
+  "version": "0.0.0",
+  "description": "Yeoman generator",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": "seafarer/generator-wp-cabana",
+  "author": {
+    "name": "Colin OBrien",
+    "email": "",
+    "url": "https://github.com/seafarer"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "~0.13.0",
+    "chalk": "^1.0.0",
+    "yosay": "^1.0.2",
+    "simple-git": "~0.7.0",
+    "rsvp": "~3.0.6",
+    "temporary": "0.0.8",
+    "async": "~0.7.0",
+    "lodash": "^3.6.0",
+    "underscore.string": "^3.0.3",
+    "slug": "^0.9.1"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
