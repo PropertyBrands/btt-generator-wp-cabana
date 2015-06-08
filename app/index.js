@@ -5,11 +5,14 @@ var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
 var fs = require('fs');
-var slug = require('slug')
+var slug = require('slug');
 
 
 var wpCabanaTheme = module.exports = function wpCabanaTheme(args, options, config) {
   yeoman.generators.Base.apply(this, arguments);
+
+  // Grab Cabana theme from node_modules
+  this.sourceRoot(path.join(__dirname, "../../../node_modules/wp-theme-cabana/"));
 
   this.on('end', function () {
     this.installDependencies({ skipInstall: options['skip-install'] });
@@ -78,12 +81,6 @@ wpCabanaTheme.prototype.askFor = function askFor() {
 
     done();
   }.bind(this));
-};
-
-wpCabanaTheme.prototype.installCabana = function installCabana() {
-  this.startertheme = 'https://github.com/bluetent/cabana/archive/master.tar.gz';
-  this.log.info('Downloading & extracting ' + chalk.yellow('Cabana'));
-  this.tarball(this.startertheme, '.', this.async());
 };
 
 function findandreplace(dir) {
