@@ -12,7 +12,7 @@ var wpCabanaTheme = module.exports = function wpCabanaTheme(args, options, confi
   yeoman.generators.Base.apply(this, arguments);
 
   // Grab Cabana theme from node_modules
-  this.sourceRoot(path.join(__dirname, "../../node_modules/wp-theme-cabana/"));
+  this.sourceRoot(path.join(__dirname, "../node_modules/wp-theme-cabana/"));
 
   this.on('end', function () {
     this.installDependencies({ skipInstall: options['skip-install'] });
