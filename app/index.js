@@ -144,11 +144,11 @@ wpCabanaTheme.prototype.app = function () {
   this.mkdir('icons');
   this.mkdir('fonts');
 
-  this.copy('./templates/_gulpfile.js', 'Gulpfile.js');
-  this.copy('./templates/_package.json', 'package.json');
-  this.copy('./templates/_bower.json', 'bower.json');
-  this.copy('./templates/scss-lint.yml', '.scss-lint.yml');
-  this.copy('./templates/editorconfig', '.editorconfig');
-  this.copy('./templates/jshintrc', '.jshintrc');
-  this.copy('./templates/bowerrc', '.bowerrc');
+  this.copy('../templates/_gulpfile.js', 'Gulpfile.js');
+  this.copy('../templates/_package.json', 'package.json');
+  this.copy('../templates/_bower.json', 'bower.json');
+  this.copy('../templates/scss-lint.yml', '.scss-lint.yml');
+  this.copy('../templates/editorconfig', '.editorconfig');
+  this.copy('../templates/jshintrc', '.jshintrc');
+  this.copy('../templates/bowerrc', '.bowerrc');
 };
