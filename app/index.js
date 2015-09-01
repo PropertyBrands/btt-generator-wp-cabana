@@ -6,6 +6,8 @@ var chalk = require('chalk');
 var yosay = require('yosay');
 var fs = require('fs');
 var slug = require('slug');
+var sys = require('sys');
+var exec = require('child_process').exec;
 
 var wpCabanaTheme = module.exports = function wpCabanaTheme(args, options, config) {
   yeoman.generators.Base.apply(this, arguments);
@@ -146,6 +148,12 @@ wpCabanaTheme.prototype.app = function () {
   this.themeCreated = currentDate.getFullYear() + '-' + (currentDate.getMonth() + 1) + '-' + currentDate.getDate();
   this.mkdir('icons');
   this.mkdir('fonts');
+
+  // Removed git repository
+  exec('echo Removing theme git repo... && rm -rf .git', function(error, stdout, stderr) {
+    console.log(stdout);
+    return this;
+  });
 
   this.copy(this.templatePath + '/_gulpfile.js', 'Gulpfile.js');
   this.copy(this.templatePath + '/_package.json', 'package.json');
