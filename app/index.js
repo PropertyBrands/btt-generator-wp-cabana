@@ -13,6 +13,9 @@ var wpCabanaTheme = module.exports = function wpCabanaTheme(args, options, confi
   // Grab Cabana theme from node_modules
   this.sourceRoot(path.join(__dirname, "../node_modules/wp-theme-cabana/"));
 
+  // Manually assign template path, since sourceRoot moved inside node_modules
+  this.templatePath = path.join(__dirname, "templates");
+
   this.on('end', function () {
     this.installDependencies({ skipInstall: options['skip-install'] });
   });
@@ -144,11 +147,11 @@ wpCabanaTheme.prototype.app = function () {
   this.mkdir('icons');
   this.mkdir('fonts');
 
-  this.copy('../templates/_gulpfile.js', 'Gulpfile.js');
-  this.copy('../templates/_package.json', 'package.json');
-  this.copy('../templates/_bower.json', 'bower.json');
-  this.copy('../templates/scss-lint.yml', '.scss-lint.yml');
-  this.copy('../templates/editorconfig', '.editorconfig');
-  this.copy('../templates/jshintrc', '.jshintrc');
-  this.copy('../templates/bowerrc', '.bowerrc');
+  this.copy(this.templatePath + '/_gulpfile.js', 'Gulpfile.js');
+  this.copy(this.templatePath + '/_package.json', 'package.json');
+  this.copy(this.templatePath + '/_bower.json', 'bower.json');
+  this.copy(this.templatePath + '/scss-lint.yml', '.scss-lint.yml');
+  this.copy(this.templatePath + '/editorconfig', '.editorconfig');
+  this.copy(this.templatePath + '/jshintrc', '.jshintrc');
+  this.copy(this.templatePath + '/bowerrc', '.bowerrc');
 };
