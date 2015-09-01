@@ -100,6 +100,7 @@ function findandreplace(dir) {
       var data = fs.readFileSync(file, 'utf8');
       var result;
       result = data.replace(/Text Domain: cabana/g, "Text Domain: " + slug(self.themeName) + "");
+      result = result.replace(/cabana/ig, "" + slug(self.themeName) + "");
       result = result.replace(/'cabana'/g, "'" + slug(self.themeName) + "'");
       result = result.replace(/cabana_/g, slug(self.themeName) + "_");
       result = result.replace(/ cabana/g, " " + slug(self.themeName));
