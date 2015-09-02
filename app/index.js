@@ -13,7 +13,10 @@ var wpCabanaTheme = module.exports = function wpCabanaTheme(args, options, confi
   yeoman.generators.Base.apply(this, arguments);
 
   // Grab Cabana theme from node_modules
-  this.sourceRoot(path.join(__dirname, "../node_modules/wp-theme-cabana/"));
+  this.sourceRoot(path.join(__dirname, "../node_modules/"));
+
+  // And copy it over
+  this.directory('/wp-theme-cabana', this.destinationRoot());
 
   // Manually assign template path, since sourceRoot moved inside node_modules
   this.templatePath = path.join(__dirname, "templates");
@@ -150,16 +153,7 @@ wpCabanaTheme.prototype.app = function () {
   this.mkdir('icons');
   this.mkdir('fonts');
 
-  // Removed git repository
-  exec('echo Removing theme git repo... && rm -rf .git', function(error, stdout, stderr) {
-    console.log(stdout);
-    return this;
-  });
-
-  this.copy(this.templatePath + '/_gulpfile.js', 'Gulpfile.js');
-  this.copy(this.templatePath + '/_package.json', 'package.json');
   this.copy(this.templatePath + '/_bower.json', 'bower.json');
-  this.copy(this.templatePath + '/scss-lint.yml', '.scss-lint.yml');
   this.copy(this.templatePath + '/editorconfig', '.editorconfig');
   this.copy(this.templatePath + '/jshintrc', '.jshintrc');
   this.copy(this.templatePath + '/bowerrc', '.bowerrc');
