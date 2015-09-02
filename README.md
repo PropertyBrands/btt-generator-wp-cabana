@@ -14,13 +14,12 @@ Install this generator globally on your system:
 
 ```npm install -g https://github.com/bluetent/generator-wp-cabana/tarball/master```
 
-Clone the theme into a directory and cd into the theme directory:
+Make a directory for your theme:
 
-``` git clone git@github.com:bluetent/wp-theme-cabana.git themename && cd themename ```
+``` mkdir themename && cd themename ```
 
 Run the generator:
 
 ``` yo wp-cabana ```
 
 And then follow the propmts.
-
