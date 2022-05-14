@@ -22,7 +22,7 @@
   "dependencies": {
     "async": "~0.7.0",
     "cabana": "bluetent/wp-theme-cabana",
-    "chalk": "^1.0.0",
+    "chalk": "^2.0.0",
     "lodash": "^3.6.0",
     "rsvp": "~3.0.6",
     "simple-git": "~0.7.0",
